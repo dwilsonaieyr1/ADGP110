@@ -132,6 +132,7 @@ Vector2<T> Vector2<T>::Multi2(Vector2<T> &a, Vector2<T> &b)
 
 }
 template<typename T>
+//Function for the Vector2 Dot Product.
 T Vector2<T>::DotProduct(Vector2 &a, Vector2 &b)
 {
 	T A;

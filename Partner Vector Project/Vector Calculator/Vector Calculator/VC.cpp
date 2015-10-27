@@ -1,3 +1,8 @@
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//Donte Wilson / Lethal Weapon Partner Project
+//10/27/15
+//ADPG110 Assessment Math Library
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
 #include "VC2.h"
 #include "VC3.h"
@@ -7,7 +12,9 @@ using namespace std;
 
 int main()
 {
+	//Creates a float for Magnitude 
 	float Mag;
+	//Creates an integer for the Dot product
 	int Dot;
 	cout << "Vector Calculator\n";
 	//Vector 2 and its components 
@@ -18,13 +25,13 @@ int main()
 	Vector2<int>TwoDVec3;
 	Vector2<int>TwoDVec4;
 
-	
+	//Creates the protocol to display the addition of Vector2. Represented in x,y
 	TwoDVec4 = TwoDVec3.Add2(TwoDVec1, TwoDVec2);
 	cout << "(" << TwoDVec4.x << "," << TwoDVec4.y << ")\n";
-	
+	//Creates the protocol to display the subtraction of Vector2. Represented in x,y
 	TwoDVec4 = TwoDVec3.Sub2(TwoDVec1, TwoDVec2);
 	cout << "(" << TwoDVec4.x << "," << TwoDVec4.y << ")\n";
-
+	//Creates the protocol to display the subtraction of Vector2. Represented in x,y
 	TwoDVec4 = TwoDVec3.Multi2(TwoDVec1, TwoDVec2);
 	cout << "(" << TwoDVec4.x << "," << TwoDVec2.y << ")\n";
 
@@ -35,23 +42,24 @@ int main()
 	cout << "Magnitude is: " << Mag << endl;
 	TwoDVec4 = TwoDVec3.Norm2(TwoDVec1);
 	cout << "(" << TwoDVec4.x << "," << TwoDVec4.y << ")\n";
+	//Displays the dot product of Vector2
 	Dot = TwoDVec3.DotProduct(TwoDVec1, TwoDVec2);
 	cout << "Dot Product is: " << Dot << endl;
 	//Vector 3 and its components.
 	cout << "\nVec3:\n";
-
+	//Shows what is inside Vector3
 	Vector3<int>Vec1(3, 7, 6);
 	Vector3<int>Vec2(4, 4, 4);
 	Vector3<int>Vec3;
 	Vector3<int>Vec4;
 
-
+	//Creates the protocol to display the addition of Vector3. Represented in x,y,z
 	Vec4 = Vec3.Add(Vec1, Vec2);
 	cout <<"Add: "<< "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
-
+	//Creates the protocol to display the subtraction of Vector3. Represented in x,y,z
 	Vec4 = Vec3.Sub(Vec1, Vec2);
 	cout <<"Sub: "<< "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
-
+	//Creates the protocol to display the Multiplication of Vector3. Represented in x,y,z
 	Vec4 = Vec3.Multi(Vec1, Vec2);
 	cout << "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
 	//Displays the 1st Magnitude
@@ -70,7 +78,7 @@ int main()
 	//Gives the cross product of Vector3.
 	Vec4 = Vec3.Cross(Vec1, Vec2);
 	cout << "Cross Product is:" << "(" << Vec4.x << "," << Vec4.z << ")" << "\n";
-
+	//Prompts the system to pause.
 	system("pause");
 	return 0;
 
