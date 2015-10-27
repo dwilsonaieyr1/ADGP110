@@ -236,4 +236,7 @@ Vector<T> operator *(Vector<T> &a, Vector<T> &b)
 	return o;
 }
 
+//template<typename T>
+//Vector<T> operator *(Vector<T)
+
 #endif MATH_H
