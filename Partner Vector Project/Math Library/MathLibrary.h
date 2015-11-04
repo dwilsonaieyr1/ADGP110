@@ -29,7 +29,7 @@ public:
 	int x;
 	//Identifies the y valye in the Vector2
 	int y;
-
+	
 //Private variables wasnt used
 private:
 };
@@ -80,6 +80,9 @@ Vector2<T> operator -(Vector2<T> &a,Vector2<T> &b)
 	return o;
 
 }
+
+
+
 template<typename T>
 //Function to obtain the Magnitude for the Vecors
 float Vector2<T>::Mag(Vector2 &a)
