@@ -20,8 +20,8 @@ int main()
 	//Vector 2 and its components 
 	cout << "Vector 2:\n";
 
-	Vector2<int>TwoDVec1(3, 3);
-	Vector2<int>TwoDVec2(1, 1);
+	Vector2<int>TwoDVec1(8,5);
+	Vector2<int>TwoDVec2(12,3);
 	Vector2<int>TwoDVec3;
 	Vector2<int>TwoDVec4;
 
@@ -41,7 +41,9 @@ int main()
 	Mag = TwoDVec3.Mag2(TwoDVec2);
 	cout << "Magnitude is: " << Mag << endl;
 	TwoDVec4 = TwoDVec3.Norm2(TwoDVec1);
-	cout << "(" << TwoDVec4.x << "," << TwoDVec4.y << ")\n";
+	cout << "(" << TwoDVec1.x << "," << TwoDVec1.y << ")\n";
+	TwoDVec4 = TwoDVec3.Norm2(TwoDVec1);
+	cout << "(" << TwoDVec2.x << "," << TwoDVec2.y << ")\n";
 	//Displays the dot product of Vector2
 	Dot = TwoDVec3.DotProduct(TwoDVec1, TwoDVec2);
 	cout << "Dot Product is: " << Dot << endl;
@@ -71,7 +73,9 @@ int main()
 
 	//Normalises Vector3
 	Vec4 = Vec3.Norm(Vec1);
-	cout << "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
+	cout <<"Normalized: " << "(" << Vec1.x << "," << Vec1.y << "," << Vec1.z << ")\n";
+	Vec4 = Vec3.Norm(Vec1);
+	cout << "Normalized: " << "(" << Vec2.x << "," << Vec2.y << "," << Vec2.z << ")\n";
 	//Gives the Dot Product of Vector3.
 	Dot = Vec3.Dot(Vec1, Vec2);
 	cout << "The Dot Product is: " << Dot << endl;
