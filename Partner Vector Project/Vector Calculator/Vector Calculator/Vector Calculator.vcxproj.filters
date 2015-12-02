@@ -26,5 +26,8 @@
     <ClInclude Include="VC3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="VC4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
