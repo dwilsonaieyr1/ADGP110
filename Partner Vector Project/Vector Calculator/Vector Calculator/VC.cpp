@@ -24,13 +24,13 @@ int main()
 	//Vector 2 and its components 
 
 
-	cout << "This is the vector 4 calculation test";
+	cout << "This is the vector 2 calculation test";
 	cout << "\n\n";
 	cout << "The numbers entered are (9,3) and (4,5)";
 
 
-	Vector2<int>TwoDVec1(9, 3);
-	Vector2<int>TwoDVec2(4, 5);
+	Vector2<int>TwoDVec1(7, 3);
+	Vector2<int>TwoDVec2(4, 7);
 	Vector2<int>TwoDVec3;
 	Vector2<int>TwoDVec4;
 
