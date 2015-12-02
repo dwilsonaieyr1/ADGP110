@@ -55,9 +55,9 @@ Vector3<T>::~Vector3()
 
 }
 template<typename T>
-Vector3<T> Vector3<T>::Add(Vector3<T> &a, Vector3<T> &b)
+Vector3<T> operator +(Vector3<T> &a, Vector3<T> &b)
 {
-	Vector3 o;
+	Vector3<T> o;
 	//Function to add Vector 3. x,y,z
 	o.x = a.x + b.x;
 
@@ -68,9 +68,9 @@ Vector3<T> Vector3<T>::Add(Vector3<T> &a, Vector3<T> &b)
 	return o;
 }
 template<typename T>
-Vector3<T> Vector3<T>::Sub(Vector3<T> &a, Vector3<T> &b)
+Vector3<T> operator -(Vector3<T> &a, Vector3<T> &b)
 {
-	Vector3 o;
+	Vector3<T> o;
 	//Function to subtract Vector3, x,y,z
 	o.x = a.x - b.x;
 
@@ -145,9 +145,9 @@ Vector3<T> Vector3<T>::Cross(Vector3 &a, Vector3 &b)
 
 }
 template<typename T>
-Vector3<T> Vector3<T>::Multi(Vector3<T> &a, Vector3<T> &b)
+Vector3<T> operator *(Vector3<T> &a, Vector3<T> &b)
 {
-	Vector3 o;
+	Vector3<T> o;
 
 	o.x = a.x * b.x;
 	o.y = a.y * b.y;

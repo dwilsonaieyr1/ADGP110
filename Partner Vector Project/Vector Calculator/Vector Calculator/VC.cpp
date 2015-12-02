@@ -79,17 +79,17 @@ int main()
 	Vector3<int>Vec4;
 
 	//Creates the protocol to display the addition of Vector3. Represented in x,y,z
-	Vec4 = Vec3.Add(Vec1, Vec2);
+	Vec4 = Vec1 + Vec2;
 	cout << "Addition: " << "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
 	cout << "\n";
 
 	//Creates the protocol to display the subtraction of Vector3. Represented in x,y,z
-	Vec4 = Vec3.Sub(Vec1, Vec2);
+	Vec4 = Vec1 - Vec2;
 	cout << "Subtraction: " << "(" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
 	cout << "\n";
 
 	//Creates the protocol to display the Multiplication of Vector3. Represented in x,y,z
-	Vec4 = Vec3.Multi(Vec1, Vec2);
+	Vec4 = Vec1 * Vec2;
 	cout << "Multiplication: (" << Vec4.x << "," << Vec4.y << "," << Vec4.z << ")\n";
 	cout << "\n";
 
