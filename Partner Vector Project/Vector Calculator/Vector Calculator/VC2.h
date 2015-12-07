@@ -15,12 +15,9 @@ public:
 	Vector2<T>(T x, T y);
 	//Decstructor
 	~Vector2<T>();
-	//Adds
-	Vector2 Add2(Vector2 &a, Vector2 &b);
-	//Subtracts
-	Vector2 Sub2(Vector2 &a, Vector2 &b);
-	//Multiples
-	Vector2 Multi2(Vector2 &a, Vector2 &b);
+
+	float Lerp(Vector2 &a, Vector2 &b);
+
 	//float for Magnitude
 	float Mag2(Vector2 &a);
 	//Normalise.
@@ -56,9 +53,9 @@ Vector2<T>::~Vector2()
 }
 template<typename T>
 //Function to Add the Vectors/Alongside the overloaded "+" operator.
-Vector2<T> Vector2<T>::Add2(Vector2<T> &a, Vector2<T> &b)
+Vector2<T> operator +(Vector2<T> &a, Vector2<T> &b)
 {
-	Vector2 o;
+	Vector2<T> o;
 	//Function for Addition for both x and y
 	o.x = a.x + b.x;
 
@@ -70,9 +67,9 @@ Vector2<T> Vector2<T>::Add2(Vector2<T> &a, Vector2<T> &b)
 }
 template<typename T>
 //Function to Sub the Vectors/Alongside the overloaded "-" operator.
-Vector2<T> Vector2<T>::Sub2(Vector2<T> &a, Vector2<T> &b)
+Vector2<T> operator -(Vector2<T> &a, Vector2<T> &b)
 {
-	Vector2 o;
+	Vector2<T> o;
 	//Function for Subtraction for both x and y
 	o.x = a.x - b.x;
 
@@ -118,10 +115,10 @@ Vector2<T> Vector2<T>::Norm2(Vector2 &a)
 }
 template<typename T>
 //Function for Vector2 Multiplication/Alongside the overloaded "*" operator.
-Vector2<T> Vector2<T>::Multi2(Vector2<T> &a, Vector2<T> &b)
+Vector2<T> operator *(Vector2<T> &a, Vector2<T> &b)
 {
 
-	Vector2 o;
+	Vector2<T> o;
 	//Multiplication function for both x and y
 	o.x = a.x * b.x;
 
@@ -132,6 +129,22 @@ Vector2<T> Vector2<T>::Multi2(Vector2<T> &a, Vector2<T> &b)
 
 }
 template<typename T>
+float Vector2<T>::Lerp(Vector2<T> &a, Vector2<T> &b)
+
+{
+
+	T asquared;
+
+	float Asqrt;
+
+	asquared = a.x + 0.5 * (b.x - a.x), a.y + 0.5 * (b.y - a.y);
+
+	Asqrt = asquared;
+
+	return Asqrt;
+}
+
+template<typename T>
 //Function for the Vector2 Dot Product.
 T Vector2<T>::DotProduct(Vector2 &a, Vector2 &b)
 {
@@ -139,6 +152,26 @@ T Vector2<T>::DotProduct(Vector2 &a, Vector2 &b)
 	A = (a.x * b.x) + (a.y * b.y);
 	return A;
 
-
 }
+template <typename T>
+T deg2rad(T deg)
+{
+	const double Pi = 3.141592;
+
+	T rad = (Pi / 180) * deg;
+
+	return rad;
+}
+
+// Radian to Degree Conversion
+template <typename T>
+T rad2deg(T rad)
+{
+	const double Pi = 3.141592;
+
+	T deg = (180 / Pi) * rad;
+
+	return deg;
+}
+
 #endif VC2_H

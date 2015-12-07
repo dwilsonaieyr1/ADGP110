@@ -9,11 +9,10 @@ public:
 	Vector3<T>(T x, T y, T z);
 	~Vector3<T>();
 
-	Vector3 Add(Vector3 &a, Vector3 &b);
-	Vector3 Sub(Vector3 &a, Vector3 &b);
-	Vector3 Multi(Vector3 &a, Vector3 &b);
+
 
 	float Mag(Vector3 &a);
+	float Lerp2(Vector3 &a, Vector3 &b);
 
 	Vector3 Norm(Vector3 &a);
 
@@ -154,5 +153,18 @@ Vector3<T> operator *(Vector3<T> &a, Vector3<T> &b)
 	o.z = a.z * a.z;
 
 	return o;
+}
+template<typename T>
+float Vector3<T>::Lerp2(Vector3<T> &a, Vector3<T> &b)
+{
+	T asquared;
+
+	float Asqrt;
+
+	asquared = a.x + 0.5 * (b.x - a.x), a.y + 0.5 * (b.y - a.y), a.z + 0.5 * (b.y - a.z);
+
+	Asqrt = asquared;
+
+	return Asqrt;
 }
 #endif VC3_H
