@@ -4,10 +4,13 @@
 //ADPG110 Assessment Math Library
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
+#include <string>
 #include "VC2.h"
 #include "VC3.h"
 #include "VC4.h"
+
 //replaces std
+
 using namespace std;
 
 
@@ -159,6 +162,14 @@ int main()
 	//Normalises Vector4
 	Vec3r = Vec1r.Norm4();
 	//Normalises Vector4
+	cout << "Vector (4) Output: " << endl;
+
+	cout << Vec3r.RR << ",";
+	cout << Vec3r.GG << ",";
+	cout << Vec3r.BB << ",";
+	cout << Vec3r.AA << endl;
+
+	cout << Vec1r.Mag4() << endl;
 
 	cout << "Hexadecimal #8A3EBD: ";
 	cout << Vec4r.Hex("#00FF00").RR << ",";

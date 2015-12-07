@@ -1,18 +1,18 @@
 #ifndef VC4_H
 #define VC4_H
 
-
+#include <string>
 template<typename T>
 class Vector4
 {
 public:
 	Vector4<T>();
-	Vector4<T>(T x, T y, T z, T r);
 	~Vector4<T>();
 	T RR;
 	T GG;
 	T BB;
 	T AA;
+	Vector4(T, T, T, T);
 	Vector4<T> Hex(string);
 	T Mag4();
 
@@ -107,5 +107,6 @@ Vector4<T> Vector4<T>::Hex(string UserInput)
 	}
 
 }
+
 
 #endif VC4_H
